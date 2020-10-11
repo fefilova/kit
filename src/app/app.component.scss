@@ -1,0 +1,122 @@
+
+.layout {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    @keyframes kit-fade-in {
+        from {bottom:-140px}
+        to {bottom: 0}
+    }
+    @keyframes kit-fade-out {
+        from {bottom: 0; background-color: transparent}
+        to {bottom:-140px; background-color: rgba(96, 106, 220, 0.19)}
+    }
+    @keyframes kit-appears {
+        from {opacity: 0; background-color: transparent}
+        99% {opacity: 0; background-color: transparent}
+    }
+    .animation{
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-image: url('/assets/kitt.svg');
+        background-size: 70%;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        bottom: -140px;
+        .kit {
+            position: absolute;
+            z-index: 5;
+            width: 500px;
+            height: 500px;
+            background-image: url('/assets/kitt.svg');
+            background-size: 70%;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            bottom: 0;
+            animation: 1s kit-appears;
+        }
+        &:hover {
+            bottom: 0;
+            animation: 1s kit-fade-in;
+        }
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2vh;
+        .logo{
+            font-weight: 600;
+            font-size: 30.9562px;
+            color: #1E266D;
+        }
+        .points{
+            font-weight: normal;
+            font-size: 16px;
+            color: #1E266D;
+        }
+        .number{
+            font-size: 16px;
+            color: #1E266D;
+
+        }
+        .contact{
+            background: #3751FF;
+            border-radius: 100px;
+            width: 113px;
+            height: 40px;
+            font-size: 16px;  
+            color: #FFFFFF;
+            border:0px;
+        }
+    }
+    .info{
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10vh;
+        .bigtext{
+            flex-grow: 0.05;
+            font-size: 56px;
+            color: #1E266D;
+        }
+        .littletext{
+            flex-grow: 0.05;
+            font-size: 18px;
+            color: #455880;
+        }
+        .infoBtn{
+            display: flex;
+            flex-direction: row;
+            .buyDigits{
+                background: #3751FF;
+                border-radius: 100px;
+                width: 150px;
+                height: 50px;
+                font-size: 20px;
+                color: #FFFFFF;
+                margin-right:5%;
+                border:0px;
+            }
+            .seeFeatures{
+                background: #FFFFFF;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+                border-radius: 100px;
+                width: 150px;
+                height: 50px;
+                font-size: 20px;
+                color: #455880;
+                border:0px;
+                box-shadow: 0 0 1px rgba(0,0,0,0.5);
+            }
+        }
+    }
+}
