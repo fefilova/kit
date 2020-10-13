@@ -1,4 +1,4 @@
-:host {
+
 
 .main-block {
     position: relative;
@@ -38,7 +38,7 @@
         animation: 1s kit-appears;
     }
     .animation{
-        position: fixed;
+        position: absolute;
         width: 400px;
         height: 300px;
         top: calc(50% - (400px / 2));
@@ -203,13 +203,39 @@
 }
 .secondary-block{
     position: relative;
-    width: 100%;
+    width:  100%;
     height: 100vh;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
-    .specific{
-
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .info-spec{
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 30%;
+        //align-items: center;
+        .specific{
+            flex-grow: 0.05;
+            font-size: 56px;
+            color:black;
+        }
+        .text{
+            flex-grow: 0.05;
+            font-size: 18px;
+            color: #455880;
+        }
     }
-}
+    .foto-pug-dragon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(/assets/pug-dragon.jpg);
+        background-size: 100%;
+        width: 300px;
+        height: 300px;
+        background-repeat: no-repeat;
+    }
 }
