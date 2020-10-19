@@ -1,19 +1,20 @@
-<div class="main-block ">
+<div class="header">
+  <a class="home" (click)=scrollToMain() >HOME </a>
+  <a class="about" (click)=scrollToSecondPage() >ABOUT</a>
+  <a class="history" (click)=scrollToThirdPage() >HISTORY</a>
+  <div class="logo" (click)=scrollToMain() ></div>
+  <a class="galerie">GALERIE</a>
+  <a class="forum">FORUM</a>
+  <a class="contact">CONTACT</a>
+</div>
+
+<div class="main-block " #main>
   <div class="animation-starter">
     <div class="animation">
       <span class="tell-us">whos the handsome pug?</span>
       <div class="kit-says"></div>
       <div class="kit"></div>
     </div>
-  </div>
-  <div class="header">
-    <a class="home">HOME</a>
-    <a class="about">ABOUT</a>
-    <a class="team">TEAM</a>
-    <div class="logo"></div>
-    <a class="galerie">GALERIE</a>
-    <a class="forum">FORUM</a>
-    <a class="contact">CONTACT</a>
   </div>
   <div class="info">
     <div class="bigtext">Welcome to the pug lovers website</div>
@@ -29,9 +30,10 @@
     <div class ="instagram"></div>
   </div>
 </div>
-<div class="secondary-block">
+
+<div class="secondary-block" #aboutPugs>
   <div class="info-spec">
-    <div class="specific">Specificity of the breed</div>
+    <div class="specific">ABOUT PUGS</div>
     <div class="text">Pugs miraculously combine the charm of a small-sized dog and
                 the courage of a true loyal dog. They are smart and strive for independence,<br />
                   so sometimes it is difficult to train. However, these dogs love to learn 
@@ -42,4 +44,31 @@
                   tend to be overweight.</div>
   </div>      
   <div class="foto-pug-dragon"></div>
+</div>
+
+<div class="thirdy-block" #historyPugs>
+  <div class="foto"></div>
+  <div class="info-story">
+    <div class="historyPugs">BREED HISTORY</div>
+    <div class="secondary-text">The pug is an ancient Chinese breed. Early Chinese
+                  manuscripts mention "square, short dogs with a short snout." In China<br />
+                   there were dogs "Ha Pa" and "Lo Jie". These two varieties were very
+                    similar and differed only in the length of the coat. "Ha Pa" were<br />
+                  long-haired. Probably the ancestors of pugs were "Luo Jie", they looked
+                   like Pekingese, but had short hair. Pugs were the dogs of the nobility<br />
+                    and lived in wealthy homes. In those days, pugs did not yet have
+                  such deep wrinkles, but a clear pattern of folds on the forehead appeared<br />
+                   and was similar to hieroglyphs. That is why the wrinkles on the pug's
+                  forehead were called the imperial sign. The pug came to France with the<br />
+                   Turkish fleet in 1553. Later this breed became loved in the Netherlands,
+                    where its color was likened to the colors of the ruling house of Orange.<br />
+                     When William III of Orange became king of England, he and his wife Maria
+                  II brought pugs from the Netherlands in 1689. This breed has been very<br />
+                   popular for about two centuries. But gradually the pugs became smaller.
+                     In 1864, for the English Queen Victoria, who wished to have this breed,<br />
+                     they hardly found one dog. After 20 years, the first pug lovers club was
+                      created, and thanks to him, the breed began to improve and acquire the<br />
+                  tandards that are still appreciated in these dogs. Napoleon's first wife,
+                   Empress Josephine, had a beloved pug named Fortuna.</div>
+  </div>      
 </div>

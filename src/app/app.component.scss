@@ -1,5 +1,46 @@
+:host{
+display: block;
+overflow: auto;
+.header{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+   // margin-top: 2vh;
+    border-bottom: 1px solid rgba(0,0,0, 0.3);
+    width: 100%;
+    top: 0;
+    background-color: white;
+    z-index: 6;
+    .home:hover {
+        border-bottom: 1px solid
+        }
+    .about:hover {
+        border-bottom: 1px solid
+        }
+    .history:hover {
+        border-bottom: 1px solid
+        }
+    .logo{
+        background-image: url(/assets/pug.svg);
+        background-size: 100%;
+        width: 100px;
+        height: 100px;
+    }
+    .logo:hover{
 
-
+    }
+    .galerie:hover {
+        border-bottom: 1px solid
+        }
+    .forum:hover {
+        border-bottom: 1px solid
+        }
+    .contact:hover {
+        border-bottom: 1px solid
+        }
+}
 .main-block {
     position: relative;
     width: 100%;
@@ -54,17 +95,19 @@
         }
         .kit-says {
             position: absolute;
-            z-index: 6;
+            z-index: 4;
             width: 300px;
             height: 300px;
-            background-image:  url(/assets/obl.png;);
+            background-image:  url(/assets/obl.png);
             background-size: 100%;
             background-position: left;
             background-repeat: no-repeat;
-            bottom: 300px;
+            bottom: 60px;
+            right: 200px;
             pointer-events: none;
             animation: 1s text-fade-out;
-            transform: rotate(45deg);
+            transform: rotate(-45deg);
+            opacity: 0;
         }
         .kit {
             position: absolute;
@@ -92,38 +135,6 @@
             }
         }
     }
-    .header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-top: 2vh;
-        border-bottom: 1px solid rgba(0,0,0, 0.3);
-        .home:hover {
-            border-bottom: 1px solid
-            }
-        .about:hover {
-            border-bottom: 1px solid
-            }
-        .team:hover {
-            border-bottom: 1px solid
-            }
-        .logo{
-            background-image: url(/assets/pug.svg);
-            background-size: 100%;
-            width: 100px;
-            height: 100px;
-        }
-        .galerie:hover {
-            border-bottom: 1px solid
-            }
-        .forum:hover {
-            border-bottom: 1px solid
-            }
-        .contact:hover {
-            border-bottom: 1px solid
-            }
-    }
     .info{
         flex: auto;
         display: flex;
@@ -139,7 +150,7 @@
         .littletext{
             flex-grow: 0.05;
             font-size: 18px;
-            color: #455880;
+            color: black;
         }
         .infoBtn{
             display: flex;
@@ -202,6 +213,8 @@
     }
 }
 .secondary-block{
+    padding: 100px;
+    box-sizing: border-box;
     position: relative;
     width:  100%;
     height: 100vh;
@@ -215,7 +228,6 @@
         display: flex;
         flex-direction: column;
         flex-basis: 30%;
-        //align-items: center;
         .specific{
             flex-grow: 0.05;
             font-size: 56px;
@@ -224,7 +236,7 @@
         .text{
             flex-grow: 0.05;
             font-size: 18px;
-            color: #455880;
+            color: black;
         }
     }
     .foto-pug-dragon{
@@ -238,4 +250,44 @@
         height: 300px;
         background-repeat: no-repeat;
     }
+}
+.thirdy-block{
+    padding: 100px;
+    box-sizing: border-box;
+    position: relative;
+    width:  100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .foto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        //background-image: url(/assets/pug-dragon.jpg);
+        background-size: 100%;
+        width: 300px;
+        height: 300px;
+        background-repeat: no-repeat;
+    }
+    .info-story{
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 30%;
+        .historyPugs{
+            flex-grow: 0.05;
+            font-size: 56px;
+            color:black;
+        }
+        .secondary-text{
+            flex-grow: 0.05;
+            font-size: 18px;
+            color: black;
+        }
+    }
+}
 }
